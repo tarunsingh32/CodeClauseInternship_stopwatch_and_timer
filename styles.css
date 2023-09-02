@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('clock.jpg');
+    background-size: cover;
+}
+
+
+
+.container{
+    width: 100%;
+    max-width: 800px;
+    padding: 60px;
+    border-radius: 10px;
+    color: white;
+    background-color: grey;
+    box-shadow: 0 10px rgba(0, 0, 0, 0.2);
+}
+
+p{
+    font-size: 10px;
+    font-weight: 500;
+    color: #ffffff62;
+    text-transform: uppercase;
+}
+
+h3{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.wrapper{
+    padding: 30px 0;
+    border-radius: 10px;
+    margin-top: 15px;
+    background: rgba(255, 255 , 255, 0.15);
+    box-shadow: 0 8px 32px 0 black ;
+    backdrop-filter: blur(1.5px);
+    border: 1px solid rgba(255, 255 , 255, 0.18);
+    transition: all 0.35;
+}
+
+.wrapper:hover{
+    box-shadow: none;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.main div{
+    width: 20%;
+    text-align: center;
+}
+
+.main .number {
+    position: relative;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 1;
+    color: white;
+}
+
+.main .colon {
+    font-size: 20px;
+}
+
+.btns{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn{
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: rgba(255, 255 , 255, 0.15);
+    box-shadow: 0 8px 32px 0 black;
+    border: 1px solid rgba(255, 255 , 255, 0.18);
+}
+
+.btn:active {
+    box-shadow: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.laps{
+    position: relative;
+    max-height: 100px;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.laps .lap{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background: rgba(255, 255 , 255, 0.15);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255 , 255, 0.18);
+}
+
+.laps .lap.active p {
+    color: white;
+}
+
+.copyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 65px;
+    font-size: 12px;
+    color: #ffffffb7;
+}
+
+@media (max-width: 600px) {
+    .container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 0;
+        padding: 0 20px;
+    }
+    .content h3{
+        font-size: 16px;
+    }
+    .outer-wrapper{
+        padding: 20px 0;
+    }
+    .main div {
+        width: 15%;
+    }
+    .main .number{
+        font-size: 50px;
+    }
+    .main .colon {
+        font-size: 16px;
+    }
+}
